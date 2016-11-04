@@ -107,29 +107,20 @@ describe Viking do
   		viking.pick_up_weapon(cupcake_weapon)
   		viking.attack(other_viking)
   	end
+
+    it 'uses fists if bow is out of arrows' do
+      b = Bow.new(0)
+      expect(viking).to receive(:damage_with_fists).and_return(2.5)
+
+      viking.pick_up_weapon(b)
+      viking.attack(other_viking)
+    end
+  end
+
+  describe '#check_death' do
+    it 'raises error when viking dies' do
+      expect{ (viking.receive_attack(100)) }.to raise_error('Oleg has Died...')
+
+    end
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
