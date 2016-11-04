@@ -1,5 +1,5 @@
 class Warmup
- 
+
   # This is a user input and command-line-output
   #   test.  You need to stub out `gets` to make it work
   # And can stub out `puts` just for fun
