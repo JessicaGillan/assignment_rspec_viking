@@ -1,4 +1,4 @@
-require_relative '../../lib/weapons/bow'
+require 'weapons/bow'
 
 describe Bow do
 	let(:bow){ Bow.new }
