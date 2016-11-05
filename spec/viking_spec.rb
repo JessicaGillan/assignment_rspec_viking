@@ -83,6 +83,7 @@ describe Viking do
   	end
 
   	it 'runs damage_with_fists if viking has no weapon' do
+
   		expect(viking).to receive(:damage_with_fists).and_return(2.5)
 
   		viking.attack(other_viking)
